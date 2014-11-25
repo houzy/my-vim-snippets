@@ -21,11 +21,11 @@ ${VISUAL}${0}
 endsnippet
 
 snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+#include "${1:`!p snip.rv = snip.basename`}.h"
 endsnippet
 
 snippet Inc "#include <> (Inc)"
-#include <${1:.h}>
+#include <${1:}.h>
 endsnippet
 
 snippet mark "#pragma mark (mark)"
@@ -84,7 +84,8 @@ typedef ${1:int} ${2:MyCustomType};
 endsnippet
 
 snippet wh "while loop"
-while(${1:/* condition */}) {
+while(${1:/* condition */})
+{
 	${VISUAL}${0}
 }
 endsnippet
@@ -107,13 +108,15 @@ if (${1:/* condition */})
 endsnippet
 
 snippet el "else .. (else)"
-else {
+else
+{
 	${VISUAL}${0}
 }
 endsnippet
 
 snippet eli "else if .. (eli)"
-else if (${1:/* condition */}) {
+else if (${1:/* condition */})
+{
 	${VISUAL}${0}
 }
 endsnippet
