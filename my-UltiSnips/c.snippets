@@ -154,4 +154,40 @@ snippet fund "function declaration" b
 ${1:void} ${2:function_name}(${3});
 endsnippet
 
+snippet gpl
+/*
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
+ *
+ * Copyright (C) ${1:Author}, `strftime("%Y")`
+ */
+endsnippet
+
+snippet file
+/*
+ * `!v expand("%:t")` - ${1}
+ *
+ * Copyright (C) `!v strftime("%Y")` ${2:`!v g:snips_company`}
+ *
+ * Author: ${3:`!v g:snips_author` (`!v g:snips_email`)}
+ * Create: `!v strftime("%Y-%m-%d %H:%M:%S")`
+ *
+ * History:
+ * --------
+ * `!v strftime("%Y-%m-%d")`	v1.0	$3
+ *     1. Initial revision.
+ */
+${4:}
+endsnippet
+
 # vim:ft=snippets:
