@@ -190,5 +190,23 @@ snippet file
  */
 ${4}
 endsnippet
+# header.h
+# here can use python function, e.g. str.upper(), str.replace
+snippet header
+#ifndef _${1:`!p snip.rv=snip.fn.upper().replace('.', '_')`}__
+#define _$1__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+${2}
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+endsnippet
 
 # vim:ft=snippets:
